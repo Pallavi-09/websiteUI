@@ -1,0 +1,37 @@
+.particles-wrapper {
+  height: 800px;
+  background: #1c316b;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 5px;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+}
+
+.control-item {
+  padding: 10px;
+  margin: 5px 10px;
+  border: 1px solid #c1c1c1;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  width: 125px;
+}
+
+.control-item:hover {
+  background: #e7e7e7;
+}
+
+.title-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  min-width: 300px;
+}

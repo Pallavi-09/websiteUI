@@ -24,9 +24,16 @@
               "src/assets"
             ],
             "styles": [
+              "src/app/common/css/bootstrap.css",
+              "src/app/common/css/main.css",
+              "src/app/common/css/responsive.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/app/common/js/particles.js",
+              "src/app/common/js/jquery.js",
+              "src/app/common/js/script.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -47,7 +54,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
+                  "maximumWarning": "4mb",
                   "maximumError": "5mb"
                 },
                 {
