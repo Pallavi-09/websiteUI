@@ -13,9 +13,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     const options = {
-      strings: ['Innovation.', 'Discovery.'],
-      typeSpeed: 100,
-      backSpeed: 100,
+      strings: ['I am Web Developer.', 'and also Angular Developer.'],
+      typeSpeed: 40,
+      backSpeed: 40,
       showCursor: true,
       cursorChar: '|',
       loop: true
