@@ -65,7 +65,7 @@
 }
 
 .main-header .header-top .info-list li a:hover{
-	color:#00ab15;
+	color:#03382e;
 }
 
 .main-header .header-top .top-right{
@@ -101,7 +101,7 @@
 	font-weight:400;
 	padding:6px 22px;
 	border-radius:50px;
-	background-color:#00ab15;
+	background-color:#03382e;
 }
 
 .main-header .header-top .login-nav li:nth-child(2) a:hover{
@@ -110,7 +110,7 @@
 }
 
 .main-header .header-top .login-nav li a:hover{
-	color:#00ab15;
+	color:#03382e;
 }
 
 .main-header .main-box{
@@ -151,12 +151,12 @@
 }
 
 .main-header .header-upper{
-    background-color: #161b6b;
+    background-color: #03382e;
 }
 
 .main-header .header-upper{
 	position:relative;
-	z-index:1;
+	z-index:999;
 }
 
 .header-style-two .main-menu .navigation > li > a{
@@ -522,7 +522,7 @@
 .main-menu .navigation > li:hover > a,
 .main-menu .navigation > li.current > a{
 	opacity:1;
-	color:#00ab15;
+	color:#017d70;
 }
 
 .header-style-two .main-menu .navigation > li:hover > a,
@@ -600,7 +600,7 @@
 .main-menu .navigation > li > ul > li:hover > a{
 	color:#ffffff;
 	padding-left:30px;
-	background:#00ab15;
+	background:#03382e;
 }
 
 .main-menu .navigation > li > ul > li.dropdown > a:after{
@@ -680,7 +680,7 @@
 .main-menu .navigation > li > ul > li > ul > li:hover > a{
 	color:#ffffff;
 	padding-left:30px;
-	background:#00ab15;
+	background:#03382e;
 }
 
 .main-menu .navigation > li > ul > li > ul > li.dropdown > a:after{
