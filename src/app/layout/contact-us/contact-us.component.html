@@ -39,37 +39,105 @@
             <div class="contact-form">
 
                 <!-- Profile Form -->
-                <form name="form" (ngSubmit)="contactForm(contactForm)" #contactForm="ngForm" novalidate>
+                <form name="form" (ngSubmit)="submitContactForm()" #contactForm="ngForm" novalidate>
                     <div class="row clearfix">
 
                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                            <input type="text" name="username" placeholder="First Name*" required
-                                #username="ngModel">
-                            <div *ngIf="username.errors.required" class="alert alert-danger">
+                            
+                            <input 
+                                type="text"
+                                name="username"
+                                placeholder="First Name*"
+                                required
+                                ngModel
+                                class="form-control"
+                                #username="ngModel"
+                                >
+
+                            <div *ngIf="username.touched && username.invalid" class="help-block error-msg">
                                 Name is required
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                            <input 
+                                type="text" 
+                                name="lastname" 
+                                placeholder="Last Name*" 
+                                class="form-control"
+                                required
+                                ngModel
+                                #lastname="ngModel">
+
+                                <div *ngIf="lastname.touched && lastname.invalid" class="help-block error-msg">
+                                    Last name is required
+                                </div>
+    
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                            <input 
+                                type="email" 
+                                name="email" 
+                                placeholder="Email Address*" 
+                                class="form-control"
+                                required
+                                ngModel
+                                email
+                                #email="ngModel">
+
+                            <div *ngIf="email.invalid && (email.touched || email.dirty)" class="help-block error-msg">
+                               
+                                <div *ngIf="email.errors.required " class="help-block error-msg">
+                                    Email is required
+                                </div>
+                                <div *ngIf="email.errors.invalid " class="help-block error-msg">
+                                    Email is required
+                                </div>
+                            </div>
+    
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                            <input 
+                                type="text" 
+                                name="phone" 
+                                placeholder="Phone Number*" 
+                                class="form-control"
+                                required
+                                ngModel
+                                maxlength="10"
+                                #phone="ngModel">
+
+                            <div *ngIf="phone.invalid && (phone.touched || phone.dirty)" class="help-block error-msg">
+                                <div *ngIf="phone.errors.required" class="help-block error-msg">
+                                    PhoneNumber is required
+                                </div>
+                                <div *ngIf="phone.errors.maxlength" class="help-block error-msg">
+                                    PhoneNumber is invalid
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                            <input type="text" name="lastname" placeholder="Last Name*" required [(ngModel)]="lastname">
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                            <input type="email" name="email" placeholder="Email Address*" required [(ngModel)]="email">
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                            <input type="text" name="phone" placeholder="Phone Number*" required [(ngModel)]="phone">
-                        </div>
-
                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                            <textarea class="" name="message" placeholder="Send Message"
-                                [(ngModel)]="message"></textarea>
+                            <textarea 
+                                class="form-control" 
+                                name="message" 
+                                placeholder="Send Message"
+                                required
+                                ngModel
+                                ></textarea>
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 form-group text-right">
-                            <button class="theme-btn btn-style-three" type="submit" name="submit-form"><span
-                                    class="txt">Send Message <i class="fa fa-angle-right"></i></span></button>
+                            <button 
+                                class="theme-btn btn-style-three" 
+                                type="submit"
+                                id= "contactUsForm"
+                                [disabled] = "!contactForm.valid" 
+                                name="submit-form">
+                                <span class="txt">Send Message <i class="fa fa-angle-right"></i></span></button>
                         </div>
 
                     </div>
